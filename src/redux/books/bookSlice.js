@@ -1,31 +1,21 @@
-const BOOK_ADDED = 'BOOK_ADDED';
-const BOOK_REMOVED = 'BOOK_REMOVED';
-
-function bookAdded() {
-  return {
-    type: BOOK_ADDED,
-    bookName: 'sapians',
-  };
-}
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   books: [],
 };
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case BOOK_ADDED:
-      return {
-        books: state.push(state.bookName),
-      };
-    case BOOK_REMOVED:
-      return {
-        books: state.pop(),
-      };
-    default:
-      return state;
-  }
-};
+const bookSlice = createSlice({
+  name: 'book',
+  initialState,
+  reducers: {
+    addBook: ((state) => {
+      state.books = state.books.push('focus');
+    }),
+    removeBook: ((state) => {
+      state.books = state.books.pop();
+    }),
+  },
+});
 
-bookAdded();
-reducer();
+export const { addBook, removeBook } = bookSlice.reducer;
+export default bookSlice.reducer;
