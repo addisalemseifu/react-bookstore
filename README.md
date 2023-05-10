@@ -29,7 +29,7 @@
 
 # 📖  Bookstore website setup.<a name="about-project"></a>
 
-> This is the implimentation of Redux-toolkit in the Bookstore-With-React Project.
+> This is the implimentation of Redux-toolkit and Store setup in the Bookstore-With-React Project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -40,6 +40,7 @@
 - React
 - React Router
 - Redux
+- Redux Toolkit
 
 <!--  KEY FEATURES -->
 
@@ -94,6 +95,13 @@
   <summary>Redux </summary>
   <ul>
     <li><a href="https://redux-toolkit.js.org/tutorials/quick-start">Redux Toolkit Quick Start </a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Redux Toolkit </summary>
+  <ul>
+    <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
   </ul>
 </details>
 
