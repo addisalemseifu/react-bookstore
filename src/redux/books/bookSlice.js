@@ -7,21 +7,17 @@ export const getBooks = createAsyncThunk('book/getBooks', () => axios.get(dataUr
   .then((res) => res.data)
   .catch((err) => console.log(err)));
 
-export const postData = createAsyncThunk('book/postData', async (bookDetail) => fetch(' https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books ', {
-  method: 'POST',
-  body: JSON.stringify({
-    item_id: bookDetail.id,
-    title: bookDetail.title,
-    author: 'suzan collins',
-    category: bookDetail.category,
-  }),
+export const postData = createAsyncThunk('book/postData', async (bookDetail) => axios.post(' https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books ', {
+  item_id: bookDetail.id,
+  title: bookDetail.title,
+  author: 'suzan collins',
+  category: bookDetail.category,
   headers: {
     'Content-type': 'application/json',
   },
-}));
+}).then((response) => response.data).catch((err) => console.log(err)));
 
-export const deleteData = createAsyncThunk('book/deleteData', (itemid) => fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books/${itemid}`, {
-  method: 'DELETE',
+export const deleteData = createAsyncThunk('book/deleteData', async (itemid) => axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books/${itemid}`, {
   body: JSON.stringify({
     item_id: itemid,
     app_id: 'McvW73kTCQbVPzcD7S2A',
@@ -29,7 +25,7 @@ export const deleteData = createAsyncThunk('book/deleteData', (itemid) => fetch(
   headers: {
     'Content-type': 'application/json',
   },
-}));
+}).then((response) => response).catch((err) => console.log(err)));
 
 const initialState = {
   books: [],
