@@ -41,8 +41,13 @@ export default function Bookstate(
           <button type="button">Edit</button>
         </ul>
       </div>
-      <div className="percentage" />
-      <div className="reading-status" />
+      <div className='percentage'>
+        <span></span>
+        <div className='percent'>
+          <h2>64%</h2>
+          <h4>completed</h4>
+        </div>
+      </div>
     </div>
   );
 }
