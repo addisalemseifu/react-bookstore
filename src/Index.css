@@ -151,8 +151,6 @@ Navbar
 
 nav {
   height: 6rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
@@ -226,6 +224,45 @@ nav svg {
 
 /*
 ===============
+Book Form
+===============
+*/
+.book-form {
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-book {
+  width: 11.5rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  margin-left: 3rem;
+}
+
+form select {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  width: 15rem;
+  color: #c4c4c4;
+  border: 1px solid #e8e8e8;
+  margin-left: 3rem;
+}
+
+form input {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  width: 25rem;
+  color: #c4c4c4;
+  border: 1px solid #e8e8e8;
+}
+
+/*
+===============
 Cart
 ===============
 */
@@ -235,7 +272,6 @@ Cart
   margin: 0 auto;
   margin-top: 40px;
   padding: 2.5rem 0;
-  max-width: var(--fixed-width);
 }
 
 .cart h2 {
