@@ -9,7 +9,7 @@ export default function Bookstate(
     itemid, title, author, category,
   },
 ) {
-  const [deleter, setDelete] = useState('Delete');
+  const [deleter, setDelete] = useState('Remove');
   const dispatch = useDispatch();
   function deleteDispatcher(itemid) {
     dispatch(deleteData(itemid));
@@ -22,11 +22,11 @@ export default function Bookstate(
   return (
     <div className="book-container">
       <div className="book-detail-container">
-        <h4>{category}</h4>
-        <h4>{title}</h4>
+        <h5>{category}</h5>
+        <h2>{title}</h2>
         <h4>{author}</h4>
         <ul>
-          <button type="button">Coments</button>
+          <button type="button">Comments</button>
           <span />
           <button
             type="button"
