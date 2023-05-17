@@ -1,26 +1,39 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+const dataUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books';
+
+export const getBooks = createAsyncThunk('book/getBooks', () => axios.get(dataUrl)
+  .then((res) => res.data)
+  .catch((err) => console.log(err)));
+
+export const postData = createAsyncThunk('book/postData', async (bookDetail) => fetch(' https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books ', {
+  method: 'POST',
+  body: JSON.stringify({
+    item_id: bookDetail.id,
+    title: bookDetail.title,
+    author: 'suzan collins',
+    category: bookDetail.category,
+  }),
+  headers: {
+    'Content-type': 'application/json',
+  },
+}));
+
+export const deleteData = createAsyncThunk('book/deleteData', (itemid) => fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/McvW73kTCQbVPzcD7S2A/books/${itemid}`, {
+  method: 'DELETE',
+  body: JSON.stringify({
+    item_id: itemid,
+    app_id: 'McvW73kTCQbVPzcD7S2A',
+  }),
+  headers: {
+    'Content-type': 'application/json',
+  },
+}));
 
 const initialState = {
-  books: [
-    {
-      itemid: 'item1',
-      title: 'The Great Gatsby',
-      author: 'John Smith',
-      category: 'Fiction',
-    },
-    {
-      itemid: 'item2',
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
-      category: 'Fiction',
-    },
-    {
-      itemid: 'item3',
-      title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
-    },
-  ],
+  books: [],
+  isLoading: true,
 };
 
 const bookSlice = createSlice({
@@ -33,6 +46,18 @@ const bookSlice = createSlice({
     removeBook: (state, action) => {
       const bookId = action.payload;
       state.books = state.books.filter((item) => item.itemid !== bookId);
+    },
+  },
+  extraReducers: {
+    [getBooks.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [getBooks.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.books = action.payload;
+    },
+    [getBooks.rejected]: (state) => {
+      state.isLoading = false;
     },
   },
 });

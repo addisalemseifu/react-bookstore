@@ -29,7 +29,7 @@
 
 # 📖  Bookstore website setup.<a name="about-project"></a>
 
-> This is the implimentation of Redux-toolkit and Store setup in the Bookstore-With-React Project.
+> This is the Connecting to the Api implimentation of Redux-toolkit and Store setup in the Bookstore-With-React Project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -102,6 +102,13 @@
   <summary>Redux Toolkit </summary>
   <ul>
     <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Bookstore API</summary>
+  <ul>
+    <li><a href="https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739">Bookstore API</a></li>
   </ul>
 </details>
 
