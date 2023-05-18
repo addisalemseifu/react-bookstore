@@ -29,7 +29,7 @@
 
 # 📖  Bookstore website setup.<a name="about-project"></a>
 
-> This is the Connecting to the Api implimentation of Redux-toolkit and Store setup in the Bookstore-With-React Project.
+> This is a Bookstore App developed with React and Redux/toolkit that use BookstoreApi as a database and allows the user to add books and remove books from his cart.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -56,7 +56,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](Comming Soon...)
+- [https://bookstore-app-with-reac-and-redux.onrender.com]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -135,7 +135,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```
-https://github.com/addisalemseifu/my-calc.git
+https://github.com/addisalemseifu/react-bookstore.git
 
 ```
 
@@ -150,7 +150,7 @@ Open the project using a live server extension that can be found into your code 
 Install npm packages with:
 
 ```
-  cd my-calc
+  cd react-bookstore
 
 ```
 

@@ -51,12 +51,13 @@ export default function Booklist() {
       </div>
       <footer>
 
-        <hr />
-        <h2>ADD NEW BOOK</h2>
+        <hr className="horizontal" />
+        <h4 className="foot-title">ADD NEW BOOK</h4>
         <div className="book-form">
           <form action="">
             <input
               type="text"
+              className="form-input"
               placeholder="Book title"
               onChange={(e) => {
                 titleHandler(e);
