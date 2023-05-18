@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;800;1000&family=Open+Sans:ital,wght@0,300;1,300&family=Roboto+Slab:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;800;1000&family=Open+Sans:ital,wght@0,300;1,300&family=Roboto+Slab:wght@300;400;500&display=swap');
+
 /*
 ===============
 Variables
@@ -24,6 +25,8 @@ Variables
   --fixed-width: 50rem;
   --pale-gray: #f5f6fa;
   --clr-blue: #0290ff;
+  --font-rob: roboto slab;
+  --font-mont: montserrat;
 }
 
 * {
@@ -229,9 +232,37 @@ nav svg {
 Book Form
 ===============
 */
+hr {
+  border: solid 0.5px #e8e8e8;
+}
+
+.foot-title {
+  font-family: var(--font-mont);
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin-top: 2rem;
+  position: relative;
+  left: -20rem;
+}
+
 .book-form {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-form form {
+  display: flex;
   border: 2px solid black;
+}
+
+.book-form input {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -246,7 +277,7 @@ Book Form
   margin-left: 3rem;
 }
 
-form select {
+.book-form select {
   padding: 0.5rem 1rem;
   border-radius: 3px;
   width: 15rem;
@@ -255,7 +286,7 @@ form select {
   margin-left: 3rem;
 }
 
-form input {
+.form-input {
   padding: 0.5rem 1rem;
   border-radius: 3px;
   width: 25rem;
@@ -328,15 +359,15 @@ Book Item
 ===============
 */
 .book-container {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
   border: solid 1px #e8e8e8;
   display: flex;
   align-items: center;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  padding: 2rem 1.625rem 1.688rem;
 }
 
 .book-detail-container {
@@ -350,10 +381,8 @@ Book Item
 
 .book-detail-container h5 {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: var(--font-mont);
   font-weight: 700;
-  font-stretch: normal;
-  font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
@@ -362,7 +391,7 @@ Book Item
 
 .book-detail-container h2 {
   margin: 0.188rem 20.188rem 0 0;
-  font-family: Roboto Slab;
+  font-family: var(--font-rob);
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -376,7 +405,7 @@ Book Item
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 0;
-  font-family: Roboto Slab;
+  font-family: var(--font-rob);
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -392,8 +421,8 @@ Book Item
   margin-top: 2rem;
 }
 
-.book-detail-container ul button {
-  font-family: Roboto Slab;
+.detail-btn {
+  font-family: var(--font-rob);
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -401,7 +430,7 @@ Book Item
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
-  border:  none;
+  border: none;
   background-color: white;
 }
 
@@ -409,6 +438,127 @@ Book Item
   border: solid 0.5px #e8e8e8;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+}
+
+.percentage {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.track {
+  stroke: lightgray;
+  fill: none;
+}
+
+.progress {
+  stroke: #0290ff;
+  fill: none;
+  stroke-dasharray: 70px;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  border: 1px solid red;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.percent {
+  width: 4.25rem;
+  height: 2.438rem;
+  font-family: var(--font-mont);
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.percent h2 {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-family: var(--font-mont);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.percent h4 {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: var(--font-mont);
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.vertical {
+  border: solid 0.5px #e8e8e8;
+  margin-left: 2rem;
+  margin-right: 3rem;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+}
+
+.status h4 {
+  width: 7.875rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-family: var(--font-rob);
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.status h3 {
+  width: 4.688rem;
+  height: 1.313rem;
+  font-family: var(--font-rob);
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.stat {
+  width: 11.5rem;
+  height: 2.063rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-family: var(--font-rob);
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
 
 .cart-item img {
@@ -462,12 +612,6 @@ Book Item
   margin-bottom: 0;
   font-size: 1.25rem;
   line-height: 1;
-}
-
-hr {
-  background: var(--clr-grey-5);
-  border-color: transparent;
-  border-width: 0.25px;
 }
 
 .modal-container {
