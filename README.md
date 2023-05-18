@@ -54,9 +54,9 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo" href="[#readme-top](https://bookstore-app-with-reac-and-redux.onrender.com)"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo]
+- [<a href="https://react-redux-bookstore.onrender.com">Live Demo</a>]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
