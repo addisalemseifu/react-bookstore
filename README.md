@@ -112,6 +112,13 @@
   </ul>
 </details>
 
+<details>
+  <summary>Zeplin project</summary>
+  <ul>
+    <li><a href=https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378>Zeplin project</a></li>
+  </ul>
+</details>
+
 ### Key Features <a name="key-features"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
